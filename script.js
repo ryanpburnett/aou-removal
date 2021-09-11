@@ -1,3 +1,6 @@
+let ff4 = `One to be born from a dragon, hoisting the light and the dark arises high up in the sky to the still land.
+Veiling the moon with the light of eternity, it brings another promise to mother earth with a bounty and mercy.`
+
 let jabberwocky = `'Twas brillig, and the slithy toves
 Did gyre and gimble in the wabe:
 All mimsy were the borogoves,
@@ -325,5 +328,6 @@ const hildenizer = (words) => {
     console.log(noAOUobj);
 };
 
+hildenizer(ff4)
 hildenizer(jabberwocky)
 hildenizer(albuquerque)
