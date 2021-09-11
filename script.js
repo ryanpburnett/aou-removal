@@ -44,16 +44,16 @@ wordsArray.forEach(word => {
     }
 });
 
-
-
-const counter = (array, value) => {
-    let count = 0;
-    for (i = 0; i < array.length; i++) {
-        if (array[i] === value) {
-            count++
+noAOU.forEach(word => {
+    const counter = (value) => {
+        let count = 0;
+        for (i = 0; i < noAOU.length; i++) {
+            if (noAOU[i] === value) {
+                count++
+            }
         }
-    }
-    return count
-};
+        return count
+    };
 
-console.log(counter(noAOU, 'brillig'))
+    console.log(`${word} : ${counter(word)}`)
+})
