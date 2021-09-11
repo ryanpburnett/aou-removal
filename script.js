@@ -44,6 +44,8 @@ wordsArray.forEach(word => {
     }
 });
 
+let noAOUobj = {};
+
 noAOU.forEach(word => {
     const counter = (value) => {
         let count = 0;
@@ -55,5 +57,7 @@ noAOU.forEach(word => {
         return count
     };
 
-    console.log(`${word} : ${counter(word)}`)
-})
+    noAOUobj[word] = counter(word)
+});
+
+console.log(noAOUobj);
