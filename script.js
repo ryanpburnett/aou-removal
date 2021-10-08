@@ -300,17 +300,17 @@ Albuquerque`
 
 const hildenizer = (words) => {
     let wordsArray = words.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()'"]/g, '').replace(/\n/g, ' ').toLowerCase().split(' ');
-
+    
     let noAOU = [];
-
+    
     wordsArray.forEach(word => {
         if (!word.includes('a') && !word.includes('o') && !word.includes('u')) {
             noAOU.push(word)
         }
     });
-
+    
     let noAOUobj = {};
-
+    
     noAOU.forEach(word => {
         const counter = (value) => {
             let count = 0;
@@ -321,13 +321,28 @@ const hildenizer = (words) => {
             }
             return count
         };
-
+        
         noAOUobj[word] = counter(word)
+        
     });
-
+    
     console.log(noAOUobj);
+    
+    // getting things to appear in HTML doc
+    for (const countedWord in noAOUobj) {
+        let main = document.getElementById('main')
+        let newP = document.createElement('p')
+        
+        newP.innerHTML = `${countedWord} : ${noAOUobj[countedWord]}`
+        main.append(newP)
+    }
+    
 };
 
-hildenizer(ff4)
-hildenizer(jabberwocky)
-hildenizer(albuquerque)
+const input = document.getElementById('input')
+
+input.addEventListener("click", hildenizer)
+
+// hildenizer(ff4)
+// hildenizer(jabberwocky)
+// hildenizer(albuquerque)
