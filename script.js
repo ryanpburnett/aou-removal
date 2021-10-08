@@ -334,7 +334,7 @@ const hildenizer = (words) => {
         let newP = document.createElement('p')
         
         newP.innerHTML = `${countedWord} : ${noAOUobj[countedWord]}`
-        main.append(newP)
+        main.prepend(newP)
     }
     
 };
