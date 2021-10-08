@@ -332,11 +332,13 @@ const hildenizer = (words) => {
     for (const countedWord in noAOUobj) {
         let main = document.getElementById('main')
         let newP = document.createElement('p')
-        
+       
+
         newP.innerHTML = `${countedWord} : ${noAOUobj[countedWord]}`
         main.prepend(newP)
     }
-    
+    let lineBreak = document.createElement('p').innerHTML = "---------------"
+    main.prepend(lineBreak)
 };
 
 const button = document.getElementById('button')
