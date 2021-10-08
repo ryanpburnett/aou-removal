@@ -102,4 +102,8 @@ button:focus {
     p {
         font-size: .75rem;
     }
+
+    #button {
+        font-size: 1rem;
+    }
 }
