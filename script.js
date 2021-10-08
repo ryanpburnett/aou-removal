@@ -339,9 +339,13 @@ const hildenizer = (words) => {
     
 };
 
+const button = document.getElementById('button')
 const input = document.getElementById('input')
 
-input.addEventListener("click", hildenizer)
+button.addEventListener("click", function(e) {
+    e.preventDefault()
+    hildenizer(input.value)
+})
 
 // hildenizer(ff4)
 // hildenizer(jabberwocky)
