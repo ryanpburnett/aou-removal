@@ -3,10 +3,17 @@ body {
 }
 
 h1 {
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5rem;
     margin-top: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+h1, p {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #form {
@@ -70,6 +77,17 @@ button:focus {
 
 }
 
+#sig {
+    margin: 5px;
+    margin-right: 1rem;
+    font-family: Courier, monospace;
+    font-size: 25px;
+    font-weight: bold;
+    color: navy;
+    text-align: right;
+    margin-bottom: 50px;
+}
+
 @media only screen and (max-width: 768px) {
     #main {
     margin-left: 20px;
@@ -77,6 +95,10 @@ button:focus {
     }
 
     h1 {
+        font-size: .75rem;
+    }
+
+    p {
         font-size: .75rem;
     }
 }
