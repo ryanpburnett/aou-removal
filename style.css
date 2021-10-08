@@ -45,6 +45,7 @@ h1, p {
     border-width: 2px;
     background-color: Red;
     font-size: 2rem;
+    text-align: center;
     animation-name: animateButton;
     animation-duration: 4s;
     animation-iteration-count: infinite;
